@@ -16,13 +16,12 @@ function redirect($path){
     header("Location: ".$path);
     exit();
 }
-function login_rest($username,$password,$rest_id){
+function login_rest($username,$password){
     global $db;
-    $query="select * from resturan where username=:username and password=:password and id=:id";
+    $query="select * from resturan where username=:username and password=:password ";
     $stmt=$db->prepare($query);
     $stmt->bindParam("username",$username);
     $stmt->bindParam("password",$password);
-    $stmt->bindParam("id",$rest_id);
     $stmt->execute();
     $result=$stmt->fetch(PDO::FETCH_ASSOC);
     if ($result!==false){
@@ -55,11 +54,12 @@ function get_resturan(){
     $resturan=$stmt->fetchAll(PDO::FETCH_ASSOC);
     return $resturan;
 }
-function get_rest_id_by_username($username){
+function get_rest_id_by_username_password($username,$password){
     global $db;
-    $query="select rest_id from user where username=?";
+    $query="select id from resturan where username=? and password=?";
     $stmt=$db->prepare($query);
     $stmt->bindParam(1,$username);
+    $stmt->bindParam(2,$password);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 

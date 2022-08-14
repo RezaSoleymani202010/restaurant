@@ -221,7 +221,7 @@ font-size: xx-large;
 
 .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 align-items: center;
     margin-top: 80px;
@@ -234,9 +234,10 @@ align-items: center;
     flex-direction: row;
     width: 100%;
     height: 100%;
+
 }
 .container form img{
-    width: 25%;
+    width: 35%;
     height: 50%;
 }
 .container form label{
@@ -248,55 +249,40 @@ align-items: center;
 }
 .container form label .input_form{
     width: 300px;
-    height: 50px;
+    height: 70px;
 border-radius: 30px;
     border-style: none;
+    margin-bottom: 35px;
     box-shadow: #1a101f 2px 2px 12px;
 }
-.container form label .input_radio{
+.container form label .input_checkbox{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 300px;
     height: 50px;
-
 }
-.container form label .input_radio div{
-    display: flex;
-    flex-direction: row;
-    margin-left: 2px;
-    width: 100%;
-    height: inherit;
+.container form label .input_checkbox label{
+    font-size: x-large;
+    font-weight: bold;
 }
-
-.container form label .input_radio div label{
+.container form label .input_checkbox input{
     font-size: xx-large;
-    margin-left: 2px;
-    display: flex;
 }
-.container form label .input_radio div input{
-    display: flex;
-    margin-right: 2%;
-
-}
-label .load_img{
-    margin-top: 25px;
+.container form label .load_img{
     display: flex;
     flex-direction: row;
-    width: 100%;
-}
-.load_img label{
-    display: flex;
-    width: 10%;
-    font-size: x-large;
-    margin-right: -198px;
-}
-.load_img input{
-    display: flex;
-    width: 70%;
-    align-items: center;
-    margin-right: -230px;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    font-family: Andalus;
     font-size: x-large;
 }
+/*label .load_img{*/
+/*    margin-top: 25px;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    width: 100%;*/
+/*}*/
+
 
 .create_food  {
     display: flex;
@@ -328,39 +314,33 @@ flex-direction: column;
     font-size: x-large;
     font-family: Andalus;
 }
-.create_food form .input_radio{
+.create_food form label .input_checkbox{
+    border-style: none;
     display: flex;
-    flex-direction: column;
-}
-.create_food form .input_radio div{
-    display: flex;
-    width: 100%;
     flex-direction: row;
     margin-top: 25px;
+    margin-bottom: 25px;
+}
+.create_food form label .input_checkbox label{
+    border-style: double;
     font-size: x-large;
-    margin-left: 0;
-    border-style: none;
+    font-family: Arial;
+    margin-right: 25px;
+    font-weight: bolder;
 }
-.create_food form .input_radio div label{
-border-style: none;
-    margin-left: 0px;
-
-}
-.create_food form .input_radio div input{
-    border-style: none;
-    margin-right: 0px;
-    margin-left: 25px;
+.create_food form label .input_checkbox input{
+ margin-left: 10px;
 
 }
 .create_food form .load_img{
     display: flex;
     width: 100%;
-    flex-direction: column;
-    border-style: none;
+    flex-direction: row;
 }
 .create_food form .load_img label{
     margin-left: 25px;
-    margin-bottom: 25px;
+  font-size: large;
+    font-weight: bold;
     width: 100%;
 }
 .create_food form .load_img input
